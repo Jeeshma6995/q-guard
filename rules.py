@@ -2,7 +2,7 @@
 
 These rules are heuristics, not proof that an algorithm is executed or vulnerable.
 """
-RULES = [
+RULES=[
     {
         "algorithm": "RSA",
         "patterns": [
