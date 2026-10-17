@@ -1,59 +1,94 @@
-Q-Guard – Post-Quantum Cryptography Readiness Scanner
+Q Guard — Security Analysis Tool
 
-About the Project:
+Overview :
 
-Q-Guard is a Python-based static analysis tool designed to identify potential cryptographic risks in source code related to the development of quantum computing.
+Q Guard is a Python-based security analysis tool designed to examine input files, identify potential security concerns using predefined detection rules, and present the findings through an interactive dashboard.
 
-As quantum computers advance, traditional cryptographic algorithms such as RSA, ECDH, and ECDSA may become vulnerable to quantum attacks. Q-Guard helps developers identify potentially affected cryptographic patterns and understand the steps needed to prepare for Post-Quantum Cryptography (PQC).
+It helps users review detected issues, understand the evidence behind findings, and investigate potential security risks.
 
-The application provides an interactive dashboard to scan source files, review findings, understand quantum risks, and explore a recommended migration roadmap.
+Features :
 
-Objectives:
-
-- Identify potential cryptographic patterns in source code.
-- Highlight algorithms that may be vulnerable to future quantum attacks.
-- Classify and prioritize potential findings for review.
-- Provide recommendations for post-quantum migration.
-- Help developers understand cryptographic risks through a simple dashboard.
-
-Features:
-
-- **Interactive Dashboard:** Displays scan statistics, findings, and detected algorithm labels.
-- **Source Code Scanner:** Scans built-in sample files or uploaded source files.
-- **Multiple Language Support:** Supports Python, Java, C, and C header files.
-- **Risk Analysis:** Prioritizes potential findings using the project's risk engine.
-- **Findings & Reports:** Filter findings and inspect evidence, file locations, confidence, and recommendations.
-- **Quantum Risk Guide:** Explains common cryptographic risks and post-quantum algorithms.
-- **Migration Roadmap:** Provides suggested review steps based on detected patterns.
-- **CSV Export:** Download filtered findings and migration roadmap reports.
-- **Dark UI:** Provides a clean, interactive interface using Streamlit.
+- File Analysis: Analyze supported input files for potential security concerns.
+- Rule-Based Detection: Apply predefined rules to identify suspicious patterns or possible issues.
+- Interactive Dashboard: View and inspect findings through a user-friendly interface.
+- Finding Review: Examine reported issues and their supporting information.
+- Modular Design: Separate application logic and detection rules for easier maintenance.
 
 Technologies Used :
 
 - Python
 - Streamlit
-- Pandas
-- Static Analysis
-- Rule-Based Pattern Detection
-- HTML and CSS for dashboard styling
+- Additional Python libraries listed in "requirements.txt"
 
 Project Structure :
 
-```text
-q-guard/
-│
-├── report/
-│   └── Final_report.docx
-│
-├── samples/
-│   ├── sample.c
-│   ├── sample.java
-│   └── sample.py
-│
+Q-Guard/
 ├── app.py
-├── scanner.py
-├── risk_engine.py
 ├── rules.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+└── reports/
+    └── Q_Guard_Report.pdf
+
+Update this structure if your actual project contains different files or folders.
+
+Prerequisites :
+
+- Python installed on your system
+- pip, Python's package installer
+- Git, if you want to clone the repository
+
+Installation and Setup :
+
+1. Clone the repository
+
+Replace the placeholder below with your actual GitHub repository URL.
+
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+
+2. Open the project directory
+
+cd Q-Guard
+
+3. Install the dependencies
+
+pip install -r requirements.txt
+
+This command installs the Python packages listed in "requirements.txt".
+
+4. Run the application
+
+If "app.py" is the Streamlit entry point, run:
+
+streamlit run app.py
+
+The application should open in your browser, or the terminal will display a local URL that you can open.
+
+Testing and Evaluation :
+
+Q Guard should be evaluated using representative test files with independently verified expected results.
+
+Evaluation may include:
+
+- Correctly identified issues
+- False-positive findings
+- Issues missed by the tool
+- Precision, recall, and F1 score, where applicable
+- Execution time and memory usage
+
+Performance results should be reported only after testing and verification.
+
+Limitations :
+
+- Findings depend on the detection rules and analysis methods implemented in the application.
+- A reported concern is not automatically a confirmed security vulnerability.
+- The tool may produce false positives or fail to identify certain issues.
+- Results should be reviewed and validated before making security decisions.
+
+Project Report :
+
+The project report, including test results, supporting figures, graphs, performance comparisons, resource usage, and architecture analysis, is available in the "reports/" directory when included in the repository.
+
+Disclaimer
+
+Q Guard is intended to assist with security analysis. Its findings should not be treated as a substitute for comprehensive security testing or expert review.
