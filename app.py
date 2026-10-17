@@ -35,7 +35,10 @@ st.markdown(
         padding-top: 0.75rem !important;
     }
     [data-testid="stHeader"], header[data-testid="stHeader"] {
-        height: 0 !important; min-height: 0 !important; display: none !important;
+    background: transparent !important;
+    height: 3rem !important;
+    min-height: 3rem !important;
+    display: flex !important;
     }
     [data-testid="stAppViewContainer"] > .main { background: #0b1220 !important; }
     .stApp > header { background: transparent !important; }
