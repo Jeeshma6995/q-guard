@@ -6,6 +6,7 @@ Q Guard is a Python-based security analysis tool designed to examine input files
 
 It helps users review detected issues, understand the evidence behind findings, and investigate potential security risks.
 
+
 Features :
 
 - File Analysis: Analyze supported input files for potential security concerns.
@@ -14,29 +15,20 @@ Features :
 - Finding Review: Examine reported issues and their supporting information.
 - Modular Design: Separate application logic and detection rules for easier maintenance.
 
+
 Technologies Used :
 
 - Python
 - Streamlit
 - Additional Python libraries listed in "requirements.txt"
 
-Project Structure :
-
-Q-Guard/
-├── app.py
-├── rules.py
-├── requirements.txt
-├── README.md
-└── reports/
-    └── Q_Guard_Report.pdf
-
-Update this structure if your actual project contains different files or folders.
 
 Prerequisites :
 
 - Python installed on your system
 - pip, Python's package installer
 - Git, if you want to clone the repository
+
 
 Installation and Setup :
 
@@ -64,6 +56,7 @@ streamlit run app.py
 
 The application should open in your browser, or the terminal will display a local URL that you can open.
 
+
 Testing and Evaluation :
 
 Q Guard should be evaluated using representative test files with independently verified expected results.
@@ -78,12 +71,14 @@ Evaluation may include:
 
 Performance results should be reported only after testing and verification.
 
+
 Limitations :
 
 - Findings depend on the detection rules and analysis methods implemented in the application.
 - A reported concern is not automatically a confirmed security vulnerability.
 - The tool may produce false positives or fail to identify certain issues.
 - Results should be reviewed and validated before making security decisions.
+
 
 Project Report :
 
